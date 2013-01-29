@@ -1,0 +1,11 @@
+{    
+    "nlpteneo": {
+        "name": "NLPTeneo APIs",
+        "protocol": "http",
+        "baseURL": "servicesqa.hmadev.com",
+        "publicPath": "/v0",
+        "headers" : {},
+        "auth": "key",
+        "keyParam": "accessToken"
+    }
+}

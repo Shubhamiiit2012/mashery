@@ -1,0 +1,769 @@
+{
+   "endpoints":[
+      {
+         "name":"NLPTeneo Patients APIs",
+         "methods":[
+            {
+               "MethodName":"Patients list",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/patients/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                             "json",
+                             "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"personId",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                             "get",
+                             "put",
+                             "delete",
+                             "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                  
+                ]
+              },
+              {
+               "MethodName":"Patient's Details by ID",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/patients/:patientId",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patientId",
+                     "Required":"Y",
+                     "Type":"string",
+                     "Description":"Patient's Id here."
+                  },
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                            "json",
+                            "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"personId",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                                "get",
+                                "put",
+                                "delete",
+                                "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                ]
+              },
+              {
+               "MethodName":"Medical History of a patient",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/patients/:patientId/medical-history/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patientId",
+                     "Required":"Y",
+                     "Type":"string",
+                     "Description":"Patient's Id here."
+                  },
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                            "json",
+                            "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"personId",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                                "get",
+                                "put",
+                                "delete",
+                                "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                ]
+              },
+              {
+               "MethodName":"Family History of a Patient",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/patients/:patientId/family-history/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"patientId",
+                     "Required":"Y",
+                     "Type":"string",
+                     "Description":"Patient's Id here."
+                  },
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                            "json",
+                            "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"personId",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                                "get",
+                                "put",
+                                "delete",
+                                "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                ]
+              }
+            ]
+         },
+         {
+            "name":"NLPTeneo Nurses APIs",
+            "methods":[
+                {
+               "MethodName":"Nurses list",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/nurses/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                             "json",
+                             "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"id",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                             "get",
+                             "put",
+                             "delete",
+                             "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                  
+                ]
+              },
+              {
+               "MethodName":"Nurse's Details by ID",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/nurses/:nurseId",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"nurseId",
+                     "Required":"Y",
+                     "Type":"string",
+                     "Description":"Nurse Id here."
+                  },
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                            "json",
+                            "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"id",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                                "get",
+                                "put",
+                                "delete",
+                                "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                ]
+              },
+              {
+               "MethodName":"Patients assigned to a Nurse",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/nurses/:nurseId/patients/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"nurseId",
+                     "Required":"Y",
+                     "Type":"string",
+                     "Description":"Nurse Id here."
+                  },
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                            "json",
+                            "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"id",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                                "get",
+                                "put",
+                                "delete",
+                                "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                ]
+              },
+              {
+               "MethodName":"Tasks assigned to a Nurse",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/nurses/:nurseId/tasks/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"nurseId",
+                     "Required":"Y",
+                     "Type":"string",
+                     "Description":"Nurse Id here."
+                  },
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                            "json",
+                            "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"id",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                                "get",
+                                "put",
+                                "delete",
+                                "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                ]
+              }
+            
+            ]
+         },
+         {
+            "name":"NLPTeneo Divisions",
+            "methods":[
+                    {
+               "MethodName":"Divisions List",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/dashboards/divisions/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                             "json",
+                             "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"id",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                             "get",
+                             "put",
+                             "delete",
+                             "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                  
+                ]
+              },
+              {
+               "MethodName":"Division details by ID",
+               "Synopsis":"This method allows you to retrieve an API",
+               "HTTPMethod":"GET",
+               "URI":"/dashboards/divisions/:divisionId/",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  { 
+                    "Name":"divisionId",
+                    "Required":"Y",
+                    "Default":"",
+                    "Type":"string",
+                    "Description":"Division Id here."
+                  
+                  },
+                  {
+                     "Name":"debug",
+                     "Default":"false",
+                     "Type":"enumerated",
+                     "EnumeratedList":[
+                            "true",
+                            "false"
+                     ]
+                  },
+                  {
+                     "Name":"format",
+                     "Default":"json",
+                     "Type":"enumerated",
+                     "Description":"The format of output.",
+                     "EnumeratedList":[
+                             "json",
+                             "xml"
+                     ]
+                  },
+                  {
+                     "Name":"limit",
+                     "Default":"10",
+                     "Type":"integer",
+                     "Description":"The amount of output."
+                  },
+                  {
+                     "Name":"offset",
+                     "Default":"0",
+                     "Type":"integer",
+                     "Description":"The index of output."
+                  },
+                  {
+                     "Name":"orderby",
+                     "Default":"id",
+                     "Type":"string",
+                     "Description":"Sort by some attribute."
+                  },
+                  {
+                     "Name":"httpMethodOverride",
+                     "Default":"get",
+                     "Type":"enumerated",
+                     "Description":"The HTTP verb.",
+                     "EnumeratedList":[
+                             "get",
+                             "put",
+                             "delete",
+                             "patch"
+                     ]
+                  },
+                  {
+                     "Name":"q",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Free text Search."
+                  },
+                  {
+                     "Name":"fields",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Comma seperated List Of fields."
+                  }
+                  
+                ]
+              }
+                    
+            ]
+         }
+       ]
+} 
